@@ -1,5 +1,5 @@
 // Uses Vite proxy in dev (empty BASE), or VITE_API_URL in production
-const BASE = import.meta.env.VITE_API_URL || "";
+const BASE = import.meta.env.VITE_API_URL || "https://twinmind-livesuggestions.onrender.com";
 
 export async function transcribeAudio(blob, apiKey) {
   const form = new FormData();
