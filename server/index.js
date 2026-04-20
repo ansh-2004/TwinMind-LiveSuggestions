@@ -181,7 +181,7 @@ ${recentTranscript || "(No transcript yet)"}
   await streamCompletion(res, apiKey, systemPrompt, [userMessage]);
 });
 
-// ── Shared SSE streaming helper ───────────────────────────────────────────────
+// ── Shared SSE streaming helper ─────────────────────────────────────────────
 async function streamCompletion(res, apiKey, systemPrompt, messages) {
   res.setHeader("Content-Type",  "text/event-stream");
   res.setHeader("Cache-Control", "no-cache");
