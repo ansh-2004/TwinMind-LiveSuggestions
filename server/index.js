@@ -100,7 +100,7 @@ Respond ONLY with valid JSON — no extra text, no markdown:
     const { data } = await axios.post(
       "https://api.groq.com/openai/v1/chat/completions",
       {
-        model: "gpt-oss-120b",
+        model: "llama3-70b-8192",
         messages: [
           { role: "system", content: systemPrompt },
           { role: "user",   content: `Recent conversation transcript:\n\n${recentText}\n\nGenerate 3 suggestions now.` },
@@ -191,7 +191,7 @@ async function streamCompletion(res, apiKey, systemPrompt, messages) {
     const response = await axios.post(
       "https://api.groq.com/openai/v1/chat/completions",
       {
-        model: "gpt-oss-120b",
+        model: "llama3-70b-8192",
         messages: [{ role: "system", content: systemPrompt }, ...messages],
         temperature: 0.5,
         max_tokens: 1200,
